@@ -19,10 +19,11 @@ function BackgroundCircle({}: Props) {
         }}
         className="relative flex justify-center items-center">
             <div className="absolute border border-[#333333] rounded-full h-[250px] w-[250px] mt-52 animate-pulse opacity-5"/>
-            <div className="absolute border border-[#333333] rounded-full h-[350px] w-[350px] mt-52 animate-pulse opacity-10"/>
-            <div className="absolute border border-[#333333] rounded-full h-[450px] w-[450px] mt-52 animate-pulse opacity-5"/>
-            <div className="absolute border border-[#333333] rounded-full h-[550px] w-[550px] mt-52 animate-pulse opacity-5"/>
-            <div className="absolute border border-[#F7AB0A] opacity-20 rounded-full h-[650px] w-[650px] mt-52 animate-pulse opacity-5"/>
+            <div className="absolute border border-[#333333] rounded-full h-[250px] w-[250px] mt-52 animate-ping"/>
+            <div className="absolute border border-[#333333] rounded-full h-[365px] w-[365px] mt-52 animate-pulse opacity-10"/>
+            <div className="absolute border border-[#333333] rounded-full h-[475px] w-[475px] mt-52 animate-pulse opacity-5"/>
+            <div className="absolute border border-[#333333] rounded-full h-[575px] w-[575px] mt-52 animate-pulse opacity-5"/>
+            <div className="absolute border border-[#F7AB0A] opacity-20 rounded-full h-[700px] w-[700px] mt-52 animate-pulse opacity-5"/>
             <div className="absolute border border-[#333333] rounded-full h-[650px] w-[650px] mt-52 animate-ping"/>
         </motion.div>
     )

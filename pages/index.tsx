@@ -5,10 +5,10 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Experience from "../components/Experience";
 
-/// TODO: https://youtu.be/urgi2iz9P6U?t=2558
+/// TODO: https://youtu.be/urgi2iz9P6U?t=2558 1:34:00
 const Home: NextPage = () => {
 return (
-  <div className="bg-gray-900 h-screen text-white snap-y snap-mandatory overflow-scroll z-0">
+  <div className="bg-[#0B0F19] h-screen text-white snap-y snap-mandatory overflow-scroll z-0">
     <Head>
       <title>Azamat EZHAEV</title>
       <meta name="description" content="My portfolio page" />
