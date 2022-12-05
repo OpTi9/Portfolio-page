@@ -25,12 +25,12 @@ export default function Hero({}: Props) {
             <BackgroundCircle />
             {/*TODO: replace with next.js image component*/}
             <img
-                className="relative rounded-full h-32 w-32 mx-auto object-cover border-4 border-[#F7AB0A]"
-                src="/images/avatar.png"
+                className="relative rounded-full h-36 w-36 mx-auto object-cover border-4 border-[#F7AB0A]"
+                src="/images/avatar.jpg"
                 alt="avatar"
             />
             <div className="z-20">
-                <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[6px]">Software Engineer</h2>
+                <h2 className="font-semibold text-sm uppercase text-gray-500 pb-2 tracking-[6px]">Software Engineer</h2>
                 <h1 className="text-5xl lg:text-6xl font-semibold px-10">
                     <span className="mr-3">{text}</span>
                     <Cursor cursorColor="#ffb641"/>

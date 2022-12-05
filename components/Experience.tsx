@@ -19,7 +19,7 @@ function Experience({}: Props) {
                 duration: 1.5,
             }}
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 Experience
             </h3>
             <div className="w-full flex space-x-5 overflow-scroll p-10 snap-x snap-mandatory">

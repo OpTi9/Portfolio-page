@@ -18,7 +18,7 @@ function About({}: Props) {
                 duration: 1.5,
             }}
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 About
             </h3>
             <motion.img
