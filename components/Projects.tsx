@@ -16,7 +16,7 @@ function Projects({}: Props) {
                 Projects
             </h3>
 
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60">
                 {projects.map((project,index) => (
                     <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                         <motion.img
@@ -25,6 +25,7 @@ function Projects({}: Props) {
                             transition={{ duration: 1 }}
                             whileInView={{opacity: 1, y: 0 }}
                             viewport={{once: true}}
+                            draggable={false}
                         />
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                             <h4 className="text-4xl font-semibold text-center">

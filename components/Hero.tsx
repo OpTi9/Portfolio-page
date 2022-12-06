@@ -28,6 +28,7 @@ export default function Hero({}: Props) {
                 className="relative rounded-full h-36 w-36 mx-auto object-cover border-4 border-[#F7AB0A]"
                 src="/images/avatar.jpg"
                 alt="avatar"
+                draggable={false}
             />
             <div className="z-20">
                 <h2 className="font-semibold text-sm uppercase text-gray-500 pb-2 tracking-[6px]">Software Engineer</h2>
