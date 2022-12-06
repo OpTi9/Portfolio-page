@@ -36,7 +36,7 @@ export default function Hero({}: Props) {
                     <Cursor cursorColor="#ffb641"/>
                 </h1>
             </div>
-            <div className="pt-5 flex space-x-1 z-20">
+            <div className="pt-5 flex space-x-1 z-20 font-semibold">
                 <Link href="#about">
                     <button className="heroButton">About</button>
                 </Link>

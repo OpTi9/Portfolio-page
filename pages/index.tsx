@@ -6,6 +6,7 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 
 /// TODO: https://youtu.be/urgi2iz9P6U?t=2558 1:34:00
 /// TODO: change font to something slicker
@@ -32,7 +33,7 @@ return (
         <Experience/>
     </section>
 
-    <section id='skills' className='snap-start'>
+    <section id='skills' className='snap-start overflow-y-hidden'>
         <Skills/>
     </section>
 
@@ -40,7 +41,9 @@ return (
         <Projects/>
     </section>
 
-    {/* Contact */}
+    <section id='contact' className='snap-start'>
+        <ContactMe/>
+    </section>
 
   </div>
 )
