@@ -120,8 +120,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
             skills,
             projects,
             socials,
-        },
-        // revalidate every hour
-        revalidate: 3,
+        }
     }
 }
