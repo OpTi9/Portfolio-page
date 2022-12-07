@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {PageInfo} from "../typings";
+import {urlFor} from "../sanity";
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
 
     return (
         <motion.div
@@ -23,8 +27,8 @@ function About({}: Props) {
             </h3>
             <motion.img
                 draggable={false}
-                className="mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
-                src="/images/picture.jpg"
+                className="w-32 h-32 mt-20 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
+                src={urlFor(pageInfo?.profileImage).url()}
                 initial={{
                     x:-200,
                     opacity: 0,
@@ -43,10 +47,7 @@ function About({}: Props) {
                     Here is a little bit <span className="underline decoration-[#F7AB0A]/50">about</span> me
                 </h4>
                 <p className="text-base text-justify">
-                    I am a software engineer based in Strasbourg, France. I have a passion for building web applications on React using Typescript.
-                    I have been working with web technologies for over 3 years now. I have worked on both frontend and backend.
-                    I am currently doing my apprenticeship at <a href="https://www.lde.fr/" target="_blank" rel="noreferrer" className="text-[#ffb641] font-semibold">LDE France</a> where I work on lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquet nisl, eu aliquet nunc nunc vel nisl. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquet nisl, eu aliquet nunc nunc vel nisl.
+                    {pageInfo?.backgroundInfo}
                 </p>
             </div>
         </motion.div>

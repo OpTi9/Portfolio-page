@@ -3,10 +3,13 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import { EnvelopeIcon } from "@heroicons/react/20/solid";
+import {Social} from "../typings";
 
-type Props = {}
+type Props = {
+    socials: Social[];
+}
 
-export default function Header({}: Props) {
+export default function Header({socials}: Props) {
     return (
         <div className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
             <motion.div
@@ -16,24 +19,18 @@ export default function Header({}: Props) {
                 transition={{ duration: 1 }}
             >
                 {/* socials */}
-                <SocialIcon
-                    url="https://www.linkedin.com/in/azamat-ezhaev/"
-                    fgColor='transparent'
-                    bgColor='gray'
-                    draggable={false}
-                />
-                <SocialIcon
-                    url="https://www.linkedin.com/in/azamat-ezhaev/"
-                    fgColor='transparent'
-                    bgColor='gray'
-                    draggable={false}
-                />
-                <SocialIcon
-                    url="https://www.linkedin.com/in/azamat-ezhaev/"
-                    fgColor='transparent'
-                    bgColor='gray'
-                    draggable={false}
-                />
+                {socials.map((social) => (
+                    <SocialIcon
+                        style={{ height: 40, width: 40, marginRight: 6,  }}
+                        key={social._id}
+                        url={social.url}
+                        target={"_blank"}
+                        rel="noopener noreferrer"
+                        fgColor='transparent'
+                        bgColor='gray'
+                        draggable={false}
+                    />
+                ))}
             </motion.div>
 
             <Link href="#contact">

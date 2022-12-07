@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skill from "./Skill";
+import {Skill as SkillType} from "../typings";
 
-type Props = {}
+type Props = {
+    skills: SkillType[];
+}
 
-function Skills({}: Props) {
+function Skills({skills}: Props) {
 
     return (
         <motion.div
@@ -21,17 +24,12 @@ function Skills({}: Props) {
                 Hover over a skill to see proficiency
             </h3>
             <div className="grid grid-cols-4 gap-5">
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
+                {skills?.slice(0, skills.length/2).map((skill) => (
+                    <Skill key={skill?._id} skill={skill} />
+                ))}
+                {skills?.map((skill) => (
+                    <Skill key={skill?._id} skill={skill} />
+                ))}
             </div>
         </motion.div>
     )

@@ -4,14 +4,18 @@ import { motion } from 'framer-motion';
 import { Cursor, useTypewriter} from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
 import Link from "next/link";
+import {PageInfo} from "../typings";
+import {urlFor} from "../sanity";
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-export default function Hero({}: Props) {
+export default function Hero({pageInfo}: Props) {
 
     const [ text, count ] = useTypewriter({
         words: [
-            "Hello, I'm Aza",
+            `Hello, I'm ${pageInfo?.name}`,
             "React+TypeScript",
             "Next.js",
             "TailwindCSS",
@@ -26,12 +30,14 @@ export default function Hero({}: Props) {
             {/*TODO: replace with next.js image component*/}
             <img
                 className="relative rounded-full h-36 w-36 mx-auto object-cover border-4 border-[#F7AB0A]"
-                src="/images/avatar.jpg"
+                src={urlFor(pageInfo?.heroImage).url()}
                 alt="avatar"
                 draggable={false}
             />
             <div className="z-20">
-                <h2 className="font-semibold text-sm uppercase text-gray-500 pb-2 tracking-[6px]">Software Engineer</h2>
+                <h2 className="font-semibold text-sm uppercase text-gray-500 pb-2 tracking-[6px]">
+                    {pageInfo?.role}
+                </h2>
                 <h1 className="text-5xl lg:text-6xl font-semibold px-10">
                     <span className="mr-3">{text}</span>
                     <Cursor cursorColor="#ffb641"/>
