@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import {SubmitHandler, useForm} from "react-hook-form";
 
@@ -27,7 +26,7 @@ function ContactMe({}: Props) {
 
             <div className="flex flex-col space-y-10">
                 <h4 className="text-4xl font-semibold text-center">
-                    Let's{" "}
+                    Lets{" "}
                     <span className="text-[#F7AB0A]/80 font-bold">Talk</span>
                 </h4>
 

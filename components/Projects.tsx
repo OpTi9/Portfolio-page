@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {urlFor} from "../sanity";
 import {Project} from "../typings";
+import Image from "next/image";
 
 type Props = {
     projects: Project[];
@@ -40,9 +41,11 @@ function Projects({projects}: Props) {
                             </h4>
 
                             <div className="flex items-center space-x-2 justify-center">
-                                {project?.technologies.map((technology, index) => (
-                                    <img
+                                {project?.technologies.map((technology) => (
+                                    <Image
                                         className="h-7 w-7"
+                                        draggable={false}
+                                        alt=""
                                         key={technology._id}
                                         src={urlFor(technology?.image).url()}
                                     />

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import type {GetStaticProps, NextPage} from 'next';
+import type {GetStaticProps} from 'next';
 import Header from '../components/Header';
 import Hero from "../components/Hero";
 import About from "../components/About";

@@ -1,11 +1,10 @@
-import React from 'react'
-import { SocialIcon } from 'react-social-icons';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Cursor, useTypewriter} from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
 import Link from "next/link";
 import {PageInfo} from "../typings";
 import {urlFor} from "../sanity";
+import Image from "next/image";
 
 type Props = {
     pageInfo: PageInfo;
@@ -13,7 +12,7 @@ type Props = {
 
 export default function Hero({pageInfo}: Props) {
 
-    const [ text, count ] = useTypewriter({
+    const [ text ] = useTypewriter({
         words: [
             `Hello, I'm ${pageInfo?.name}`,
             "React+TypeScript",
@@ -27,8 +26,7 @@ export default function Hero({pageInfo}: Props) {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircle />
-            {/*TODO: replace with next.js image component*/}
-            <img
+            <Image
                 className="relative rounded-full h-36 w-36 mx-auto object-cover border-4 border-[#F7AB0A]"
                 src={urlFor(pageInfo?.heroImage).url()}
                 alt="avatar"
