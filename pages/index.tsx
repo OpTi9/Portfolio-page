@@ -90,6 +90,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
             socials,
         },
         // revalidate every hour
-        revalidate: 3600,
+        revalidate: 3,
     }
 }

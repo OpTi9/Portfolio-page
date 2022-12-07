@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {urlFor} from "../sanity";
+import {Project} from "../typings";
 
-type Props = {}
+type Props = {
+    projects: Project[];
+}
 
-function Projects({}: Props) {
-    const projects = [1,2,3,4,5];
+function Projects({projects}: Props) {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -20,26 +23,34 @@ function Projects({}: Props) {
                 {projects.map((project,index) => (
                     <div key={index} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                         <motion.img
-                            src="/images/lde.png"
+                            src={urlFor(project?.image).url()}
                             initial={{ y: -300, opacity: 0 }}
                             transition={{ duration: 1 }}
                             whileInView={{opacity: 1, y: 0 }}
                             viewport={{once: true}}
                             draggable={false}
+                            className="md:max-h-[400px]"
                         />
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                             <h4 className="text-4xl font-semibold text-center">
                                 <span className="">
                                     Case Study <span className="text-[#F7AB0A]/80 font-bold">{index+1} </span> of {projects.length}:
                                 </span>
-                                {" "}Nft project
+                                {" "}{project?.title}
                             </h4>
+
+                            <div className="flex items-center space-x-2 justify-center">
+                                {project?.technologies.map((technology, index) => (
+                                    <img
+                                        className="h-7 w-7"
+                                        key={technology._id}
+                                        src={urlFor(technology?.image).url()}
+                                    />
+                                ))}
+                            </div>
+
                             <p className="text-justify text-lg text-center md:text-left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam aliquam,
-                                nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl nec aliquam aliquam,
-                                nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl
-                                sit amet nisl. Sed euismod, nisl nec aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.
+                                {project?.summary}
                             </p>
                         </div>
                     </div>
