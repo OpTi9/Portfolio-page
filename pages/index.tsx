@@ -73,23 +73,23 @@ return (
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    const pageInfo: PageInfo = await fetchPageInfo();
-    const experiences: Experience[] = await fetchExperiences();
-    const skills: Skill[] = await fetchSkills();
-    const projects: Project[] = await fetchProjects();
-    const socials: Social[] = await fetchSocials();
-
-    // when we deploy we first fetch the data from the CMS and then we pass it to the page as props
-    return {
-        props: {
-            pageInfo,
-            experiences,
-            skills,
-            projects,
-            socials,
-        },
-        // revalidate every hour
-        revalidate: 3,
-    }
-}
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//     const pageInfo: PageInfo = await fetchPageInfo();
+//     const experiences: Experience[] = await fetchExperiences();
+//     const skills: Skill[] = await fetchSkills();
+//     const projects: Project[] = await fetchProjects();
+//     const socials: Social[] = await fetchSocials();
+//
+//     // when we deploy we first fetch the data from the CMS and then we pass it to the page as props
+//     return {
+//         props: {
+//             pageInfo,
+//             experiences,
+//             skills,
+//             projects,
+//             socials,
+//         },
+//         // revalidate every hour
+//         revalidate: 3,
+//     }
+// }
