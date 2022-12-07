@@ -73,23 +73,54 @@ return (
 
 export default Home;
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//     const pageInfo: PageInfo = await fetchPageInfo();
-//     const experiences: Experience[] = await fetchExperiences();
-//     const skills: Skill[] = await fetchSkills();
-//     const projects: Project[] = await fetchProjects();
-//     const socials: Social[] = await fetchSocials();
-//
-//     // when we deploy we first fetch the data from the CMS and then we pass it to the page as props
-//     return {
-//         props: {
-//             pageInfo,
-//             experiences,
-//             skills,
-//             projects,
-//             socials,
-//         },
-//         // revalidate every hour
-//         revalidate: 3,
-//     }
-// }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    const pageInfo: PageInfo = await fetchPageInfo();
+    const experiences: Experience[] = await fetchExperiences();
+    const skills: Skill[] = await fetchSkills();
+    const projects: Project[] = await fetchProjects();
+    const socials: Social[] = await fetchSocials();
+    // const pageInfo: PageInfo = {
+    //     _id: "123",
+    //     backgroundInfo: "123",
+    //     _type: "pageInfo",
+    //     role: "123",
+    //     name: "123",
+    //     heroImage: {
+    //         _type: "image",
+    //         asset: {
+    //             _ref: "image-Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000-jpg",
+    //             _type: 'reference',
+    //         }
+    //     },
+    //     profileImage: {
+    //         _type: "image",
+    //         asset: {
+    //             _ref: "image-Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000-jpg",
+    //             _type: 'reference',
+    //         }
+    //     },
+    //     _rev: "123",
+    //     _createdAt: "123",
+    //     _updatedAt: "123",
+    //     address: "123",
+    //     phone: "123",
+    //     email: "123",
+    // };
+    // const experiences: Experience[] = [];
+    // const skills: Skill[] = [];
+    // const projects: Project[] = [];
+    // const socials: Social[] = [];
+
+    // when we deploy we first fetch the data from the CMS and then we pass it to the page as props
+    return {
+        props: {
+            pageInfo,
+            experiences,
+            skills,
+            projects,
+            socials,
+        },
+        // revalidate every hour
+        revalidate: 3,
+    }
+}
