@@ -79,6 +79,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
     const skills: Skill[] = await fetchSkills();
     const projects: Project[] = await fetchProjects();
     const socials: Social[] = await fetchSocials();
+    //
     // const pageInfo: PageInfo = {
     //     _id: "123",
     //     backgroundInfo: "123",
