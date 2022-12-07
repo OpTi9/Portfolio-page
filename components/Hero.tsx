@@ -26,7 +26,7 @@ export default function Hero({pageInfo}: Props) {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircle />
-            <Image
+            <img
                 className="relative rounded-full h-36 w-36 mx-auto object-cover border-4 border-[#F7AB0A]"
                 src={urlFor(pageInfo?.heroImage).url()}
                 alt="avatar"

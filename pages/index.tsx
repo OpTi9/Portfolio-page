@@ -74,6 +74,7 @@ return (
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+    console.log(process.env);
     const pageInfo: PageInfo = await fetchPageInfo();
     const experiences: Experience[] = await fetchExperiences();
     const skills: Skill[] = await fetchSkills();

@@ -42,7 +42,7 @@ function Projects({projects}: Props) {
 
                             <div className="flex items-center space-x-2 justify-center">
                                 {(project?.technologies ?? []).map((technology) => (
-                                    <Image
+                                    <img
                                         className="h-7 w-7"
                                         draggable={false}
                                         alt=""
