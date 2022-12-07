@@ -3,7 +3,7 @@ import { sanityClient } from "../sanity";
 import { Social} from "../typings";
 
 const query = groq`
-*[_type == "social"][0]
+*[_type == "social"]
 `;
 
 export const fetchSocials = async () => {
