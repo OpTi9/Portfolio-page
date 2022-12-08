@@ -33,14 +33,14 @@ function Projects({projects}: Props) {
                             className="md:max-h-[400px]"
                         />
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                            <h4 className="text-4xl font-semibold text-center">
+                            <h4 className="text-1xl sm:text-4xl font-bold sm:font-semibold text-center">
                                 <span className="">
                                     Case Study <span className="text-[#F7AB0A]/80 font-bold">{index+1} </span> of {projects.length}:
                                 </span>
                                 {" "}{project?.title}
                             </h4>
 
-                            <div className="flex items-center space-x-2 justify-center">
+                            <div className="hidden sm:flex items-center space-x-2 justify-center">
                                 {(project?.technologies ?? []).map((technology) => (
                                     <img
                                         className="h-7 w-7"
@@ -52,7 +52,7 @@ function Projects({projects}: Props) {
                                 ))}
                             </div>
 
-                            <p className="text-justify text-lg text-center md:text-left">
+                            <p className="text-justify text-base sm:text-lg text-center md:text-left">
                                 {project?.summary}
                             </p>
                         </div>

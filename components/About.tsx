@@ -22,12 +22,12 @@ function About({pageInfo}: Props) {
                 duration: 1.5,
             }}
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
+            <h3 className="hidden sm:block absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 About
             </h3>
             <motion.img
                 draggable={false}
-                className="w-32 h-32 mt-20 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
+                className="w-64 h-64 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
                 src={urlFor(pageInfo?.profileImage).url()}
                 initial={{
                     x:-200,
@@ -43,7 +43,7 @@ function About({pageInfo}: Props) {
                 }}
             />
             <div className="space-y-10 px-0 md:px-10">
-                <h4 className="text-4xl font-semibold">
+                <h4 className="text-2xl sm:text-4xl font-semibold">
                     Here is a little bit <span className="underline decoration-[#F7AB0A]/50">about</span> me
                 </h4>
                 <p className="text-base text-justify">

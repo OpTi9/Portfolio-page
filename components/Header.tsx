@@ -21,7 +21,7 @@ export default function Header({socials}: Props) {
                 {/* socials */}
                 {socials.map((social) => (
                     <SocialIcon
-                        style={{ height: 40, width: 40, marginRight: 6,  }}
+                        style={{ height: 30, width: 30, marginRight: 5,  }}
                         key={social._id}
                         url={social.url}
                         target={"_blank"}

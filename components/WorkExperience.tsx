@@ -22,7 +22,7 @@ function WorkExperience({experiences}: Props) {
                 duration: 1.5,
             }}
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold overflow-x-hidden">
+            <h3 className="hidden sm:block absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold overflow-x-hidden">
                 Experience
             </h3>
             <div className="w-full flex space-x-5 overflow-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60">
