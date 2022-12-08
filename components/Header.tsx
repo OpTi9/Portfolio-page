@@ -13,7 +13,7 @@ export default function Header({socials}: Props) {
     return (
         <div className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
             <motion.div
-                className="flex flex-row items-center"
+                className="hidden sm:block flex flex-row items-center"
                 initial={{ opacity: 0, x: -500, scale: 0.5 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{ duration: 1 }}
@@ -21,7 +21,7 @@ export default function Header({socials}: Props) {
                 {/* socials */}
                 {socials.map((social) => (
                     <SocialIcon
-                        style={{ height: 30, width: 30, marginRight: 5,  }}
+                        style={{ height: 30, width: 30, marginRight: 5, }}
                         key={social._id}
                         url={social.url}
                         target={"_blank"}
@@ -35,7 +35,7 @@ export default function Header({socials}: Props) {
 
             <Link href="#contact">
                 <motion.div
-                    className='flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A]'
+                    className='hidden sm:block flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A]'
                     initial={{ opacity: 0, x: 500, scale: 0.5 }}
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     transition={{ duration: 1 }}

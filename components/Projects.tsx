@@ -4,6 +4,7 @@ import {urlFor} from "../sanity";
 import {Project} from "../typings";
 import Image from "next/image";
 import Link from "next/link";
+import {Tooltip} from "@mui/material";
 
 type Props = {
     projects: Project[];
@@ -18,7 +19,7 @@ function Projects({projects}: Props) {
             whileInView={{opacity: 1 }}
             className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
+            <h3 className="absolute top-12 sm:top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 Projects
             </h3>
 
@@ -51,15 +52,19 @@ function Projects({projects}: Props) {
                                 {" "}{project?.title}
                             </h4>
 
-                            <div className="hidden sm:flex items-center space-x-2 justify-center">
+
+                            <div className="hidden sm:flex items-center space-x-2 m:space-x-3 flex space-x-3 my-2 rounded-full justify-center">
                                 {(project?.technologies ?? []).map((technology) => (
-                                    <img
-                                        className="h-7 w-7"
-                                        draggable={false}
-                                        alt=""
-                                        key={technology._id}
-                                        src={urlFor(technology?.image).url()}
-                                    />
+                                        <Tooltip title={technology.title}>
+                                            <img
+                                                data-tooltip-target="tooltip-default"
+                                                className="h-10 w-10 object-scale-down"
+                                                draggable={false}
+                                                alt={technology.title}
+                                                key={technology._id}
+                                                src={urlFor(technology?.image).url()}
+                                            />
+                                        </Tooltip>
                                 ))}
                             </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {Experience} from "../typings";
 import {urlFor} from "../sanity";
+import {Tooltip} from "@mui/material";
 //import Image from "next/image";
 
 type Props = {
@@ -38,9 +39,11 @@ function ExperienceCard({experience}: Props) {
                 <p className="font-bold text-2xl mt-1">
                     {experience?.company}
                 </p>
-                <div className="flex space-x-2 my-2">
+                <div className="flex space-x-3 my-2 bg-[#0B0F19]/30 rounded-full justify-center">
                     {experience?.technologies.map((technology) => (
-                        <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-10 h-10 rounded-full"  alt=""/>
+                        <Tooltip title={technology.title}>
+                            <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-10 h-10 rounded-full object-scale-down"  alt={technology.title}/>
+                        </Tooltip>
                     ))}
                 </div>
                 <p className="uppercase py-5 text-gray-300">

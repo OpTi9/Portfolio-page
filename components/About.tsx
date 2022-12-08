@@ -11,7 +11,7 @@ function About({pageInfo}: Props) {
 
     return (
         <motion.div
-            className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+            className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center"
             initial={{
                 opacity: 1,
             }}
@@ -22,12 +22,12 @@ function About({pageInfo}: Props) {
                 duration: 1.5,
             }}
         >
-            <h3 className="hidden sm:block absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
+            <h3 className="absolute top-10 sm:top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 About
             </h3>
             <motion.img
                 draggable={false}
-                className="mt-5 w-40 h-40 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
+                className="mb-8 sm:mb-0 mt-5 w-64 h-64 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
                 src={urlFor(pageInfo?.profileImage).url()}
                 initial={{
                     x:-200,
@@ -42,7 +42,7 @@ function About({pageInfo}: Props) {
                     duration: 1.2,
                 }}
             />
-            <div className="space-y-10 px-0 md:px-10">
+            <div className="space-y-5 px-0 md:px-10">
                 <h4 className="text-2xl sm:text-4xl font-semibold">
                     Here is a little bit <span className="underline decoration-[#F7AB0A]/50">about</span> me
                 </h4>
