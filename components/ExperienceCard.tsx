@@ -32,8 +32,12 @@ function ExperienceCard({experience}: Props) {
                 }}
             />
             <div className="px-0 md:px-10">
-                <h4 className="text-4xl font-light">Junior Web Developer</h4>
-                <p className="font-bold text-2xl mt-1">Librairie LDE</p>
+                <h4 className="text-4xl font-light">
+                    {experience?.jobTitle}
+                </h4>
+                <p className="font-bold text-2xl mt-1">
+                    {experience?.company}
+                </p>
                 <div className="flex space-x-2 my-2">
                     {experience?.technologies.map((technology) => (
                         <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-10 h-10 rounded-full"  alt=""/>
