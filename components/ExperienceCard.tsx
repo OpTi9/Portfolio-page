@@ -17,7 +17,7 @@ function ExperienceCard({experience}: Props) {
             <motion.img
                 draggable={false}
                 src={urlFor(experience?.companyImage).url()}
-                className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+                className="w-24 h-24 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
                 initial={{
                     y: -100,
                 }}
@@ -33,23 +33,23 @@ function ExperienceCard({experience}: Props) {
                 }}
             />
             <div className="px-0 md:px-10">
-                <h4 className="text-4xl font-light">
+                <h4 className="text-2xl sm:text-4xl font-light text-center">
                     {experience?.jobTitle}
                 </h4>
-                <p className="font-bold text-2xl mt-1">
+                <p className="font-bold text-xl sm:text-2xl mt-1 text-center">
                     {experience?.company}
                 </p>
-                <div className="flex space-x-3 my-2 bg-[#0B0F19]/30 rounded-full justify-center">
+                <div className="px-1 flex space-x-3 my-2 bg-[#0B0F19]/30 rounded-full justify-center">
                     {experience?.technologies.map((technology) => (
                         <Tooltip key={technology._id} title={technology.title}>
-                            <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-10 h-10 rounded-full object-scale-down"  alt={technology.title}/>
+                            <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-scale-down"  alt={technology.title}/>
                         </Tooltip>
                     ))}
                 </div>
-                <p className="uppercase py-5 text-gray-300">
+                <p className="uppercase py-5 text-gray-300 text-xs sm:text-base text-center">
                     {new Date(experience.dateStarted).toDateString()} - {experience.isCurrent ? "Present" : new Date(experience.dateEnded).toDateString()}
                 </p>
-                <ul className="list-disc space-y-4 ml-5 text-lg">
+                <ul className="list-disc space-y-4 ml-5 text-lg pb-2">
                     {experience.points.map((point, i) => (
                         <li key={i}>{point}</li>
                     ))}

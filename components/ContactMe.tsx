@@ -36,12 +36,8 @@ function ContactMe({}: Props) {
                         <p className="text-2xl">aezhaev@gmail.com</p>
                     </div>
                     <div className="flex items-center space-x-5 justify-center">
-                        <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse"/>
-                        <p className="text-2xl">+33789692494</p>
-                    </div>
-                    <div className="flex items-center space-x-5 justify-center">
                         <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse"/>
-                        <p className="text-2xl">Strasbourg</p>
+                        <p className="text-2xl">Strasbourg, France</p>
                     </div>
                 </div>
 
