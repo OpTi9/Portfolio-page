@@ -10,6 +10,7 @@ type Props = {
 }
 
 function Projects({projects}: Props) {
+    console.log(projects);
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -28,7 +29,7 @@ function Projects({projects}: Props) {
                             Click on an image to access
                         </h3>
                         <Link
-                            href={project?.link ?? "#"}
+                            href={project?.linkToProject ?? "#"}
                             target={"_blank"}
                             rel="noopener noreferrer"
                         >
