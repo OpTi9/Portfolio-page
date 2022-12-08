@@ -41,7 +41,7 @@ function ExperienceCard({experience}: Props) {
                 </p>
                 <div className="flex space-x-3 my-2 bg-[#0B0F19]/30 rounded-full justify-center">
                     {experience?.technologies.map((technology) => (
-                        <Tooltip title={technology.title}>
+                        <Tooltip key={technology._id} title={technology.title}>
                             <img draggable={false} key={technology._id} src={urlFor(technology.image).url()} className="w-10 h-10 rounded-full object-scale-down"  alt={technology.title}/>
                         </Tooltip>
                     ))}
