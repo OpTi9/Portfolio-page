@@ -35,7 +35,7 @@ export default function Header({socials}: Props) {
 
             <Link href="#contact">
                 <motion.div
-                    className='hidden sm:block flex flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A]'
+                    className='hidden sm:flex sm:flex-row items-center text-gray-300 cursor-pointer hover:text-[#F7AB0A]'
                     initial={{ opacity: 0, x: 500, scale: 0.5 }}
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     transition={{ duration: 1 }}
