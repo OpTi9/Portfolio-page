@@ -18,6 +18,8 @@ export default function Hero({pageInfo}: Props) {
             "React+TypeScript",
             "Next.js",
             "TailwindCSS",
+            "Still Work in Progress",
+            "Full Stack Developer",
         ],
         loop: true,
         delaySpeed: 2000,
