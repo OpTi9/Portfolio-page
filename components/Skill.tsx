@@ -10,7 +10,7 @@ function Skill({ skill }: Props) {
 
     return (
         <div className="group relative flex cursor-pointer">
-            <img className="object-scale-down rounded-full border border-gray-800 w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 object-center filter group-hover:grayscale transition duration-300 ease-in-out"
+            <img className="object-scale-down rounded-full border border-gray-800 w-20 h-20 md:w-28 md:h-28 xl:w-32 xl:h-32 object-center filter group-hover:grayscale transition duration-300 ease-in-out"
                 src={urlFor(skill?.image).url()}
                 draggable={false}
             />

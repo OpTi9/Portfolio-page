@@ -19,7 +19,7 @@ function Projects({projects}: Props) {
             whileInView={{opacity: 1 }}
             className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
         >
-            <h3 className="absolute top-12 sm:top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
+            <h3 className="ml-3 sm:ml-0 absolute top-6 sm:top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold">
                 Projects
             </h3>
 
