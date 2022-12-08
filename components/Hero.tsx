@@ -22,7 +22,7 @@ export default function Hero({pageInfo}: Props) {
             "Full Stack Developer",
         ],
         loop: true,
-        delaySpeed: 2000,
+        delaySpeed: 1500,
     });
 
     return (

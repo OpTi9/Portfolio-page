@@ -25,9 +25,9 @@ function WorkExperience({experiences}: Props) {
             <h3 className="absolute top-6 sm:top-24 uppercase tracking-[20px] text-gray-500 text-2xl font-semibold overflow-x-hidden ml-3 sm:ml-0">
                 Experience
             </h3>
-            <div className="mt-5 sm:mt-0 w-full flex space-x-5 overflow-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/60 scrollbar-thin">
-                {experiences.map((experience) => (
-                    <ExperienceCard key={experience?._id} experience={experience} />
+            <div className="mt-5 sm:mt-0 w-full flex space-x-5 overflow-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-[#0B0F19] scrollbar-thumb-[#0B0F19] scrollbar-thin">
+                {experiences.map((experience,index) => (
+                    <ExperienceCard key={experience?._id} experience={experience} index={index} total={experiences.length} />
                 ))}
             </div>
         </motion.div>
