@@ -55,7 +55,7 @@ function Projects({projects}: Props) {
 
                             <div className="hidden sm:flex items-center space-x-2 m:space-x-3 flex space-x-3 my-2 rounded-full justify-center">
                                 {(project?.technologies ?? []).map((technology) => (
-                                        <Tooltip title={technology.title}>
+                                        <Tooltip key={technology._id} title={technology.title}>
                                             <img
                                                 data-tooltip-target="tooltip-default"
                                                 className="h-10 w-10 object-scale-down"
