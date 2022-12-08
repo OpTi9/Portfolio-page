@@ -11,6 +11,5 @@ const query = groq`
 export const fetchExperiences = async () => {
     const res = await sanityClient.fetch(query);
     const experiences: Experience[] = res;
-    console.log(experiences);
     return experiences;
 };

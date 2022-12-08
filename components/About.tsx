@@ -27,7 +27,7 @@ function About({pageInfo}: Props) {
             </h3>
             <motion.img
                 draggable={false}
-                className="w-64 h-64 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
+                className="mt-5 w-40 h-40 md:mt-10 md:mb-10 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
                 src={urlFor(pageInfo?.profileImage).url()}
                 initial={{
                     x:-200,
