@@ -14,7 +14,7 @@ function Skill({ skill }: Props) {
                 src={urlFor(skill?.image).url()}
                 draggable={false}
             />
-            <div className="rounded-full absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-gray-900 h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 z-0">
+            <div className="rounded-full absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-gray-900 h-20 w-20 md:w-28 md:h-28 xl:w-32 xl:h-32 z-0">
                 <div className="flex flex-col items-center justify-center h-full">
                     <p className="text-m text-center items-center font-bold text-white opacity-100">
                         {skill?.title}
